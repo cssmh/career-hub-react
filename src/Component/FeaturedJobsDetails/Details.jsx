@@ -1,19 +1,20 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveJobApplication } from '../../Utility/LocalStorage';
 
 const Details = () => {
+    const detailsDataFromLoader = useLoaderData();
+    // const {paramsId} = useParams()
+    // console.log(paramsId.detailId);
+    
+    const { detailId } = useParams();
+    const getId = parseInt(detailId);
 
-    const showToast = () => {
+    const showToastAndIdToLocalStorage = () => {
+        saveJobApplication(getId)
         toast("application submitted!")
     }
-
-  const detailsDataFromLoader = useLoaderData();
-  // const {paramsId} = useParams()
-  // console.log(paramsId.detailId);
-
-  const { detailId } = useParams();
-  const getId = parseInt(detailId);
 
   const jobMatching = detailsDataFromLoader.find((job) => job.id === getId);
   const {
@@ -65,7 +66,7 @@ const Details = () => {
             <p><span className="font-bold text-[#474747]">Email:</span> {contact_information.email}</p>
             <p className="mt-3"><span className="font-bold text-[#474747]">Address:</span> {contact_information.address}</p>
           </div>
-          <button onClick={showToast} className="w-full mt-3 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">
+          <button onClick={showToastAndIdToLocalStorage} className="w-full mt-3 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">
             Apply Now
           </button>
           <ToastContainer />
