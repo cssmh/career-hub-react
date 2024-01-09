@@ -49,13 +49,14 @@ const Details = () => {
             <h1 className="font-extrabold border-b-2 border-gray-300 pb-3">
               Job Details
             </h1>
-            <p className="my-2">Salary: {salary}</p>
-            <p>Job Title: {job_title}</p>
+            <p className="my-2"><span className="font-bold text-[#474747]">Salary:</span> {salary}</p>
+            <p><span className="font-bold text-[#474747]">Job Title:</span> {job_title}</p>
             <div className="my-3 border-b-2 border-gray-300 pb-3">
               <h1 className="font-extrabold">Contact Information</h1>
             </div>
-            <p className="my-2">Phone: {contact_information.phone}</p>
-            <p>Email: {contact_information.email}</p>
+            <p className="my-2"><span className="font-bold text-[#474747]">Phone:</span> {contact_information.phone}</p>
+            <p><span className="font-bold text-[#474747]">Email:</span> {contact_information.email}</p>
+            <p className="mt-3"><span className="font-bold text-[#474747]">Address:</span> {contact_information.address}</p>
           </div>
           <button className="w-full mt-3 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">
             Apply Now
