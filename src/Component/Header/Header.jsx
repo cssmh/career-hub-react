@@ -35,13 +35,13 @@ const Header = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >{links}</ul>
         </div>
-        <a href="/" className="text-2xl font-extrabold">CareerHub</a>
+        <a href="/" className="bg-2xl font-extrabold">CareerHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{links}</ul>
+        <ul className="space-x-4 menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">Star Applying</a>
+        <a className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] bg-white">Star Applying</a>
       </div>
     </div>
   );

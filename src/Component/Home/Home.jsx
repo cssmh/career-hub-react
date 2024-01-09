@@ -14,7 +14,7 @@ const Home = () => {
   // JOb category section react end
 
   //   Featured Jobs react
-
+  const [totalJobs, setTotalJobs] = useState(4)
   const [jobs, setJobs] = useState([]);
 
   useState(() => {
@@ -75,9 +75,12 @@ const Home = () => {
             need. Its your future
           </p>
           <div className="grid justify-center grid-cols-1 md:grid-cols-2 gap-3">
-            {jobs.map((job) => (
+            {jobs.slice(0, totalJobs).map((job) => (
               <FeaturedJobs key={job.id} getJobs={job}></FeaturedJobs>
             ))}
+          </div>
+          <div className={totalJobs === jobs.length? "hidden" : ""}>
+          <button onClick={()=>(setTotalJobs(jobs.length))} className='mt-4 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>See All Jobs</button>
           </div>
         </div>
       </section>
