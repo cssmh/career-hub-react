@@ -80,7 +80,7 @@ const Home = () => {
             ))}
           </div>
           <div className={totalJobs === jobs.length? "hidden" : ""}>
-          <button onClick={()=>(setTotalJobs(jobs.length))} className='mt-4 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>See All Jobs</button>
+          <button onClick={()=>(setTotalJobs(jobs.length))} className='my-4 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>See All Jobs</button>
           </div>
         </div>
       </section>
