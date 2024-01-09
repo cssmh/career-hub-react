@@ -1,7 +1,7 @@
 [
      {
       "id": 1,
-      "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
+      "logo": "https://raw.githubusercontent.com/cssmh/career-hub-react/main/src/assets/logo/google.png",
       "job_title": "Technical Database Engineer",
       "company_name": "Google LLC",
       "remote_or_onsite": "Remote",
@@ -20,7 +20,7 @@
     },
     {
         "id": 2,
-        "logo": "https://i.ibb.co/H4wJGhb/netflix-4-1.png",
+        "logo": "https://raw.githubusercontent.com/cssmh/career-hub-react/main/src/assets/logo/netflix.png",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",
         "remote_or_onsite": "Onsite",
@@ -39,7 +39,7 @@
       },
       {
         "id": 3,
-        "logo": "https://i.ibb.co/JRXgX92/tesla-9-1.png",
+        "logo": "https://raw.githubusercontent.com/cssmh/career-hub-react/main/src/assets/logo/tesla.png",
         "job_title": "Software Engineer",
         "company_name": "Tesla",
         "remote_or_onsite": "Onsite",
@@ -58,7 +58,7 @@
       },
       {
         "id": 4,
-        "logo": "https://i.ibb.co/PzrbTxh/google-1-1-1.png",
+        "logo": "https://raw.githubusercontent.com/cssmh/career-hub-react/main/src/assets/logo/google.png",
         "job_title": "Software Engineer",
         "company_name": "Google LLC",
         "remote_or_onsite": "Onsite",
@@ -77,9 +77,9 @@
       },
       {
         "id": 5,
-        "logo": "https://i.ibb.co/JRXgX92/tesla-9-1.png",
+        "logo": "https://raw.githubusercontent.com/cssmh/career-hub-react/main/src/assets/logo/CareerHub.png",
         "job_title": "Technical Database Engineer",
-        "company_name": "Tesla",
+        "company_name": "Career Hub",
         "remote_or_onsite": "Remote",
         "location": "Dhaka, Bangladesh",
         "job_type": "Full Time",
@@ -96,9 +96,9 @@
       },
       {
         "id": 6,
-        "logo": "https://i.ibb.co/H4wJGhb/netflix-4-1.png",
+        "logo": "https://raw.githubusercontent.com/cssmh/career-hub-react/main/src/assets/logo/airbnb.png",
         "job_title": "Senior Product Designer",
-        "company_name": "Netflix",
+        "company_name": "Airbnb",
         "remote_or_onsite": "Remote",
         "location": "Dhaka, Bangladesh",
         "job_type": "Full Time",

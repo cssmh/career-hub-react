@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import userPhoto from "../../assets/images/user.png";
 import JobCategory from "../JobCategory/JobCategory";
+import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 const Home = () => {
+  // JOb category section react
   const [jobCategory, setJobCategory] = useState([]);
 
   useEffect(() => {
@@ -9,6 +11,18 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setJobCategory(data));
   }, []);
+  // JOb category section react end
+
+  //   Featured Jobs react
+
+  const [jobs, setJobs] = useState([]);
+
+  useState(() => {
+    fetch("jobs.json")
+      .then((res) => res.json())
+      .then((data) => setJobs(data));
+  }, []);
+  //   Featured Jobs react end
 
   return (
     <div>
@@ -41,7 +55,7 @@ const Home = () => {
             Explore thousands of job opportunities with all the information you
             need. Its your future
           </p>
-          <div className="flex justify-center my-8 gap-5">
+          <div className="flex-row lg:flex justify-center my-8 gap-5">
             {jobCategory.map((singleCategory) => (
               <JobCategory
                 key={singleCategory.id}
@@ -52,6 +66,22 @@ const Home = () => {
         </div>
       </section>
       {/* Job Category List Section ENd*/}
+      {/* Featured Jobs */}
+      <section>
+        <div className="text-center mb-8">
+          <h1 className="text-2xl font-extrabold">Featured Jobs</h1>
+          <p className="text-[#757575] my-4">
+            Explore thousands of job opportunities with all the information you
+            need. Its your future
+          </p>
+          <div className="grid justify-center grid-cols-1 md:grid-cols-2 gap-3">
+            {jobs.map((job) => (
+              <FeaturedJobs key={job.id} getJobs={job}></FeaturedJobs>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Featured Jobs End*/}
     </div>
   );
 };
