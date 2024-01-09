@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   const links = (
     <>
-      <li><NavLink to={"/"} className={({ isActive }) => isActive ? "text-[#7E90FE]" : ""}>Home</NavLink></li>
-      <li><NavLink to={"/statistics"} className={({ isActive }) => isActive ? "text-[#7E90FE]" : ""}>Statistics</NavLink></li>
-      <li><NavLink to={"/applied-jobs"} className={({ isActive }) => isActive ? "text-[#7E90FE]" : ""}>Applied Jobs</NavLink></li>
-      <li><NavLink to={"/blogs"} className={({ isActive }) => isActive ? "text-[#7E90FE]" : ""}>Blogs</NavLink></li>
+      <li><NavLink to={"/"} className={({ isActive }) => isActive ? "text-[#9873FF]" : ""}>Home</NavLink></li>
+      <li><NavLink to={"/statistics"} className={({ isActive }) => isActive ? "text-[#9873FF]" : ""}>Statistics</NavLink></li>
+      <li><NavLink to={"/applied-jobs"} className={({ isActive }) => isActive ? "text-[#9873FF]" : ""}>Applied Jobs</NavLink></li>
+      <li><NavLink to={"/blogs"} className={({ isActive }) => isActive ? "text-[#9873FF]" : ""}>Blogs</NavLink></li>
     </>
   );
 
@@ -35,13 +35,13 @@ const Header = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >{links}</ul>
         </div>
-        <a href="/" className="bg-2xl font-extrabold">CareerHub</a>
+        <a href="/" className="text-2xl font-extrabold">CareerHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="space-x-4 menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">Star Applying</a>
+        <a className="btn bg-gradient-to-r from-[#9873FF] to-[#9873FF] text-white">Star Applying</a>
       </div>
     </div>
   );

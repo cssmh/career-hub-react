@@ -1,6 +1,13 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
+
+    const showToast = () => {
+        toast("application submitted!")
+    }
+
   const detailsDataFromLoader = useLoaderData();
   // const {paramsId} = useParams()
   // console.log(paramsId.detailId);
@@ -58,9 +65,10 @@ const Details = () => {
             <p><span className="font-bold text-[#474747]">Email:</span> {contact_information.email}</p>
             <p className="mt-3"><span className="font-bold text-[#474747]">Address:</span> {contact_information.address}</p>
           </div>
-          <button className="w-full mt-3 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">
+          <button onClick={showToast} className="w-full mt-3 btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">
             Apply Now
           </button>
+          <ToastContainer />
         </div>
       </div>
     </div>
