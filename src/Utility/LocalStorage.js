@@ -7,12 +7,12 @@ const getLocalStorage = () => {
     }
 }
 
-const storeDataToLocalStorage = (id) => {
-    const mainData = getLocalStorage();
-    const exists = mainData.find(data => data.id === id)
+const storeDataToLocalStorage = (gotId) => {
+    const updatedLocalIds = getLocalStorage();
+    const exists = updatedLocalIds.find(storedId => storedId === gotId)
     if(!exists){
-        mainData.push(id);
-        localStorage.setItem("jobs", JSON.stringify(mainData))
+        updatedLocalIds.push(gotId);
+        localStorage.setItem("jobs", JSON.stringify(updatedLocalIds))
     }
 }
 
