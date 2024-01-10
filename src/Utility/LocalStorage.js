@@ -8,11 +8,11 @@ const getLocalStorage = () => {
 }
 
 const storeDataToLocalStorage = (gotId) => {
-    const updatedLocalIds = getLocalStorage();
-    const exists = updatedLocalIds.find(storedId => storedId === gotId)
+    const updatedLocalStorageIds = getLocalStorage();
+    const exists = updatedLocalStorageIds.find(storedId => storedId === gotId)
     if(!exists){
-        updatedLocalIds.push(gotId);
-        localStorage.setItem("jobs", JSON.stringify(updatedLocalIds))
+        updatedLocalStorageIds.push(gotId);
+        localStorage.setItem("jobs", JSON.stringify(updatedLocalStorageIds))
     }
 }
 
