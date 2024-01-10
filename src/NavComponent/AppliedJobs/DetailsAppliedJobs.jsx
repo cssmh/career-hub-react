@@ -3,7 +3,7 @@ import { AiOutlineDollarCircle } from "react-icons/ai";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 const DetailsAppliedJobs = ({getDetailApplied}) => {
-    console.log(getDetailApplied);
+    // console.log(getDetailApplied);
     const { id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = getDetailApplied
     return (
         <div className='border-2 border-gray-100'>

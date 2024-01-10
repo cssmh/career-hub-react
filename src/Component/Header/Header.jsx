@@ -41,7 +41,7 @@ const Header = () => {
         <ul className="space-x-4 menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-r from-[#9873FF] to-[#9873FF] text-white">Star Applying</a>
+        <a className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">Star Applying</a>
       </div>
     </div>
   );
