@@ -13,7 +13,7 @@ const Details = () => {
 
   const showToastAndIdToLocalStorage = () => {
     storeDataToLocalStorage(getId);
-    toast("application submitted!");
+      toast("application submitted!")
   };
 
   const jobMatching = detailsDataFromLoader.find((job) => job.id === getId);

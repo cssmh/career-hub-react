@@ -28,7 +28,7 @@ const removeFromLocalStorage = (idToRemove) => {
 //     localStorage.setItem("jobs", JSON.stringify(updatedLocalStorageData));
 // }
 
-export { removeFromLocalStorage, getLocalStorage, storeDataToLocalStorage }
+export { getLocalStorage, storeDataToLocalStorage, removeFromLocalStorage }
 
 
 // const getStoredThem = () => {
