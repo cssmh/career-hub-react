@@ -16,7 +16,19 @@ const storeDataToLocalStorage = (gotId) => {
     }
 }
 
-export { getLocalStorage, storeDataToLocalStorage }
+const removeFromLocalStorage = (idToRemove) => {
+    const getStoredDataFirst = getLocalStorage()
+    const updateUsingFilter = getStoredDataFirst.filter(dataId => dataId !== idToRemove)
+    localStorage.setItem("jobs", JSON.stringify(updateUsingFilter))
+}
+
+// const removeFromLocalStorage = (idToRemove) => {
+//     const localStorageData = getLocalStorage();
+//     const updatedLocalStorageData = localStorageData.filter(id => id !== idToRemove);
+//     localStorage.setItem("jobs", JSON.stringify(updatedLocalStorageData));
+// }
+
+export { removeFromLocalStorage, getLocalStorage, storeDataToLocalStorage }
 
 
 // const getStoredThem = () => {

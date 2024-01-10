@@ -2,7 +2,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineDollarCircle } from "react-icons/ai";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-const DetailsAppliedJobs = ({getDetailApplied}) => {
+const DetailsAppliedJobs = ({getDetailApplied, handleRemoveAppliedJob}) => {
     // console.log(getDetailApplied);
     const { id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = getDetailApplied
     return (
@@ -28,6 +28,7 @@ const DetailsAppliedJobs = ({getDetailApplied}) => {
               <div>
                 <Link to={`/details/${id}`}>
                 <button className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>View Details</button></Link>
+                <button onClick={()=>handleRemoveAppliedJob(id)} className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>Remove</button>
               </div>
             </div>
         </div>
@@ -35,7 +36,8 @@ const DetailsAppliedJobs = ({getDetailApplied}) => {
 };
 
 DetailsAppliedJobs.propTypes = {
-    getDetailApplied: PropTypes.object
+    getDetailApplied: PropTypes.object,
+    handleRemoveAppliedJob: PropTypes.func
 }
 
 export default DetailsAppliedJobs;

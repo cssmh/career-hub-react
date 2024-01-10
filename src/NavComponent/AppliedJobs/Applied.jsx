@@ -1,9 +1,17 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import DetailsAppliedJobs from "./DetailsAppliedJobs";
-import { getLocalStorage } from "../../Utility/LocalStorage";
+import { getLocalStorage, removeFromLocalStorage } from "../../Utility/LocalStorage";
 
 const Applied = () => {
+
+    // Remove applied using remove btn
+    const handleRemoveAppliedJob = (id) => {
+        const removeDisplayJobs = displayJobs.filter(jobs => jobs.id !== id)
+        setDisplayJobs(removeDisplayJobs);
+        removeFromLocalStorage(id)
+    }
+    // Remove applied using remove btn End
 
     const [appliedJob, setAppliedJob] = useState([])
     const [displayJobs, setDisplayJobs] = useState([])
@@ -57,7 +65,7 @@ const Applied = () => {
             </div>
             <div className="px-1 lg:px-0 mb-8">
                 {
-                    displayJobs.map(jobs => <DetailsAppliedJobs key={jobs.id} getDetailApplied={jobs}></DetailsAppliedJobs>)
+                    displayJobs.map(jobs => <DetailsAppliedJobs key={jobs.id} getDetailApplied={jobs} handleRemoveAppliedJob={handleRemoveAppliedJob}></DetailsAppliedJobs>)
                 }
             </div>
         </div>
