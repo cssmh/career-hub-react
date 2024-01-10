@@ -11,7 +11,7 @@ import Home from './Component/Home/Home';
 import Statistics from './NavComponent/Statistics/Statistics';
 import Applied from './NavComponent/AppliedJobs/Applied';
 import Blogs from './NavComponent/Blogs/Blogs';
-import Details from './Component/FeaturedJobsDetails/Details';
+import Details from './Component/JobsDetails/Details';
 
 const router = createBrowserRouter([
   {
