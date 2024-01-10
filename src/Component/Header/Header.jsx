@@ -1,6 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+  const showToast = () =>{
+    toast("Please Scroll Down!")
+  }
+
   const links = (
     <>
       <li><NavLink to={"/"} className={({ isActive }) => isActive ? "text-[#9873FF]" : ""}>Home</NavLink></li>
@@ -9,7 +15,6 @@ const Header = () => {
       <li><NavLink to={"/blogs"} className={({ isActive }) => isActive ? "text-[#9873FF]" : ""}>Blogs</NavLink></li>
     </>
   );
-
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -41,7 +46,8 @@ const Header = () => {
         <ul className="space-x-4 menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">Star Applying</a>
+        <Link to={"/"} className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white" onClick={showToast}>Start Applying</Link>
+        <ToastContainer />
       </div>
     </div>
   );
