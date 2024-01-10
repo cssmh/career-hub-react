@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredThem } from "../../Utility/LocalStorage";
 import DetailsAppliedJobs from "./DetailsAppliedJobs";
+import { getLocalStorage } from "../../Utility/LocalStorage";
 
 const Applied = () => {
 
@@ -10,7 +10,7 @@ const Applied = () => {
 
     const allJobs = useLoaderData()
     useEffect(()=> {
-        const localStorageJob = getStoredThem();
+        const localStorageJob = getLocalStorage();
         if(allJobs.length > 0){
             const totalJobApplied = allJobs.filter(job => localStorageJob.includes(job.id))
             setDisplayJobs(totalJobApplied)

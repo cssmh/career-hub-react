@@ -14,6 +14,7 @@ const Home = () => {
   // JOb category section react end
 
   //   Featured Jobs react
+  // State for see all jobs btn
   const [totalJobs, setTotalJobs] = useState(4)
   const [jobs, setJobs] = useState([]);
 

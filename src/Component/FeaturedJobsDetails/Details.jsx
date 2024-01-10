@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveJobApplication } from "../../Utility/LocalStorage";
+import { storeDataToLocalStorage } from "../../Utility/LocalStorage";
 
 const Details = () => {
   const detailsDataFromLoader = useLoaderData();
@@ -12,7 +12,7 @@ const Details = () => {
   const getId = parseInt(detailId);
 
   const showToastAndIdToLocalStorage = () => {
-    saveJobApplication(getId);
+    storeDataToLocalStorage(getId);
     toast("application submitted!");
   };
 
