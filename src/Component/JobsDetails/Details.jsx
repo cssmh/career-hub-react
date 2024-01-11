@@ -1,9 +1,12 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLoaderData, useParams } from "react-router-dom";
-import { storeDataToLocalStorage } from "../../Utility/LocalStorage";
+import { getLocalStorage, storeDataToLocalStorage } from "../../Utility/LocalStorage";
+import { useEffect, useState } from "react";
 
 const Details = () => {
+  const [match, setMatch] = useState()
+
   const detailsDataFromLoader = useLoaderData();
   // const {paramsId} = useParams()
   // console.log(paramsId.detailId);
@@ -11,9 +14,25 @@ const Details = () => {
   const { detailId } = useParams();
   const getId = parseInt(detailId);
 
+  // This part only used for showing different toasting
+  const localId = getLocalStorage()
+  useEffect(()=> {
+    if(localId.length > 0){
+      const matchingBoth = localId.find(local => local === match)
+      setMatch(matchingBoth);
+    }
+  },[match, localId])
+  // This part only used for showing different toasting end
+
   const showToastAndIdToLocalStorage = () => {
     storeDataToLocalStorage(getId);
-      toast("application submitted!")
+    setMatch(getId)
+    if(!match){
+      toast("application successful!!")
+      }
+      else{
+        toast("already applied!")
+    }
   };
 
   const jobMatching = detailsDataFromLoader.find((job) => job.id === getId);
