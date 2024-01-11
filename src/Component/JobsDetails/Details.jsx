@@ -28,7 +28,7 @@ const Details = () => {
     storeDataToLocalStorage(getId);
     setMatch(getId)
     if(!match){
-      toast("application successful!!")
+      toast(`application successful on ${company_name}!!`)
       }
       else{
         toast("already applied!")

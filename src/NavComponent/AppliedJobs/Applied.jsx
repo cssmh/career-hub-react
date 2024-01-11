@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import DetailsAppliedJobs from "./DetailsAppliedJobs";
 import { getLocalStorage, removeFromLocalStorage } from "../../Utility/LocalStorage";
+import swal from "sweetalert";
 
 const Applied = () => {
 
     // Remove applied using remove btn
-    const handleRemoveAppliedJob = (id) => {
+    const handleRemoveAppliedJob = (id, company_name) => {
+        swal("Success!", `Removed ${company_name} from Applied jobs`, "success");
         const removeDisplayJobs = displayJobs.filter(jobs => jobs.id !== id)
         setDisplayJobs(removeDisplayJobs);
         removeFromLocalStorage(id)

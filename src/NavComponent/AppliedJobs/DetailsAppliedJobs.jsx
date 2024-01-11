@@ -28,7 +28,7 @@ const DetailsAppliedJobs = ({getDetailApplied, handleRemoveAppliedJob}) => {
               <div>
                 <Link to={`/details/${id}`}>
                 <button className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>View Details</button></Link>
-                <button onClick={()=>handleRemoveAppliedJob(id)} className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>Remove</button>
+                <button onClick={()=>handleRemoveAppliedJob(id, company_name)} className='btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white'>Remove</button>
               </div>
             </div>
         </div>
