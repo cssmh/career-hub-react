@@ -8,10 +8,10 @@ const Applied = () => {
 
     // Remove applied using remove btn
     const handleRemoveAppliedJob = (id, company_name) => {
-        swal("Success!", `Removed ${company_name} from Applied jobs`, "success");
         const removeDisplayJobs = displayJobs.filter(jobs => jobs.id !== id)
         setDisplayJobs(removeDisplayJobs);
         removeFromLocalStorage(id)
+        swal("Success!", `Removed ${company_name} from Applied jobs`, "success");
     }
     // Remove applied using remove btn End
 
@@ -54,7 +54,7 @@ const Applied = () => {
 
     return (
         <div>
-            <h2 className="text-center font-extrabold text-2xl mt-12">Applied Jobs {appliedJob.length}</h2>
+            <h2 className="text-center font-extrabold text-2xl mt-12">Applied Jobs {displayJobs.length}</h2>
             <div className="text-right">
                <details className="dropdown dropdown-end">
                  <summary className="m-1 btn bg-blue-200 my-2">Filter by</summary>
