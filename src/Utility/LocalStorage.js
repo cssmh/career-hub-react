@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getLocalStorage = () => {
     const localStorageData = localStorage.getItem("jobs")
     if(localStorageData){
@@ -13,6 +15,10 @@ const storeDataToLocalStorage = (gotId) => {
     if(!exists){
         updatedLocalStorageIds.push(gotId);
         localStorage.setItem("jobs", JSON.stringify(updatedLocalStorageIds))
+        toast("application successful!")
+    }
+    else{
+        toast("Sorry, already applied!")
     }
 }
 

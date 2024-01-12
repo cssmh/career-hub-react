@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { getLocalStorage, storeDataToLocalStorage } from "../../Utility/LocalStorage";
@@ -27,12 +27,6 @@ const Details = () => {
   const showToastAndIdToLocalStorage = () => {
     storeDataToLocalStorage(getId);
     setMatch(getId)
-    if(!match){
-      toast(`application successful on ${company_name}!!`)
-      }
-      else{
-        toast("already applied!")
-    }
   };
 
   const jobMatching = detailsDataFromLoader.find((job) => job.id === getId);
